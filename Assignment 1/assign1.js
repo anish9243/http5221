@@ -17,17 +17,17 @@ window.onload = function () {
   }
 
   /**
-   * Function to validate login credentials.
+   * Function to validate login Username and Password.
    * @param {string} username
    * @param {string} password
-   * @returns {boolean|string} true if credentials are valid, otherwise an error message
+   * @returns {boolean|string} true if username and password are valid, else an error message
    */
   function checkLogin(username, password) {
     // console.log("user:", username, "Pass:", password); Checking username and password
     const validUsername = "anish098";
     const validPassword = "87757270c86d517698777aeba4273838";
     const encryptedPassword = md5Encrypt(password);
-    console.log(encryptedPassword);
+    
     if (!username) {
       return "No Username Entered.";
     } else if (!password) {
@@ -37,5 +37,5 @@ window.onload = function () {
     } else {
       return true;
     }
-  }
+  } //Function End 
 };
