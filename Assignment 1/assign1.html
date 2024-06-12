@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lab Login</title>
+	<link rel="stylesheet" href="assign1.css" type="text/css">
+</head>
+
+<body>
+	<main>
+		<h1>Login Page</h1>
+		<!--==== LOGIN FORM BLOCK ====-->
+		<div class="login">
+			<form name="login__form" action="#" method="POST">
+				<fieldset class="login__fieldset">
+					<legend>User Authentication</legend>
+					<div>
+						<label for="username" class="login__label">Username:</label>
+						<input name="username" type="text" class="login__txtbox login__username">
+						<label for="password" class="login__label">Password:</label>
+						<input name="password" type="password" class="login__txtbox login__password">
+						<button class="login__button">Log in</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<!--==== OUTPUT BLOCK ====-->
+		<div class="output" id="output_box">
+		</div><!--END output BLOCK-->
+	</main>
+	<script src="jasmine/src/md5Encrypt.js"></script>
+	<script src="assign1.js"></script>
+	<script src="jasmine/lib/md5.js"></script>
+</body>
+
+</html>

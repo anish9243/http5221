@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple XSS Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>XSS Demonstration</h1>
+    <form id="inputForm">
+        <div class="form-group">
+            <label for="userInput">Enter your name:</label>
+            <input type="text" id="userInput" name="userInput" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="displayArea"></div>
+
+    <script>
+        document.getElementById('inputForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var userInput = document.getElementById('userInput').value;
+            document.getElementById('displayArea').innerHTML = '<p>Hello, ' + userInput + '</p>';
+        });
+    </script>
+</body>
+</html>
