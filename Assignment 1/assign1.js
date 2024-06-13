@@ -3,6 +3,7 @@ window.onload = function () {
   var username = formHandle.username;
   var password = formHandle.password;
   var output = document.getElementById("output_box");
+  
   formHandle.onsubmit = processForm;
 
   function processForm() {
@@ -15,7 +16,7 @@ window.onload = function () {
     }
     return false;
   }
-
+  //This funtion we can use in the ./src/checkLogin file
   /**
    * Function to validate login Username and Password.
    * @param {string} username
@@ -27,7 +28,7 @@ window.onload = function () {
     const validUsername = "anish098";
     const validPassword = "87757270c86d517698777aeba4273838";
     const encryptedPassword = md5Encrypt(password);
-    
+
     if (!username) {
       return "No Username Entered.";
     } else if (!password) {
@@ -37,5 +38,5 @@ window.onload = function () {
     } else {
       return true;
     }
-  } //Function End 
+  } //Function End
 };

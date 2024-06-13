@@ -1,4 +1,5 @@
 describe("Check Login Tests", function() {
+    
     it("should return 'No Username Entered.' when Username is Empty", function() {
         expect(checkLogin('', 'password')).toBe('No Username Entered.');
     });
